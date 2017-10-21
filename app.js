@@ -1,4 +1,3 @@
-console.log("Your fucker mother in the shower");
 var context;
 let game;
 class Personaje {
@@ -26,21 +25,25 @@ class Game {
 		this.skipTicks = 1000 / this.fps;
 		this.nextGameTick = (new Date).getTime();
 		this.rect = new Personaje (5,5,"black");
+		console.log(this.rect.x);
 	}
 
 	initialize() {	
 	
 		var canvas = document.getElementById('playground');
-
+		
 		if (!canvas.getContext) {
 			console.log('Error: 2d canvas not supported by this browser.');
 			return;
 		}
 		
 		context = canvas.getContext('2d');
+		canvas.width = 800;
+		canvas.height = 800;
 		canvas.style.backgroundColor = "red";
 		//var rect = new Personaje(20, 20, "black");
 		this.rect.draw(context);
+		console.log(canvas.width);
 		//var rect = context.fillRect(10,10,30,30);
 		//document.getElementById("playground").style.backgroundColor = "lightblue";
 		window.addEventListener('keydown', e => {
@@ -50,6 +53,11 @@ class Game {
 				switch (code) {
 				case 37: //flecha izquierda
 					this.rect.x -=5;
+					if (this.rect.x + this.rect.widht > canvas.offsetLeft) {
+					//this.rect.x = canvas.width - this.rect.x;	
+					console.log("RABO");
+					console.log(this.rect.widht);
+					}
 					break;
 				case 38: //flecha abajo
 					this.rect.y -=5;
@@ -63,6 +71,16 @@ class Game {
 				}
 			}
 		}, false);
+		
+		if (this.rect.x > canvas.offsetLeft) {
+			this.rect.x = canvas.width - this.rect.x;	
+			console.log("RABO");
+		}
+		
+		if (this.rect.y > canvas.height) {
+			this.rect.y = canvas.height - this.rect.y;		
+			console.log("RABO");		
+		}
 		
 	}
 

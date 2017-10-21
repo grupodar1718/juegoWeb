@@ -14,7 +14,7 @@ br{
     right: 0;
 }
 
-#bjugar, #bcreditos{
+#bjugar, #bcreditos, #binstrucciones{
 	display:block;
     margin: auto;
     width: 250px;
@@ -32,7 +32,7 @@ br{
 	background: rgba(0, 0, 0, 0.1);
 }
 
-#boton1, #boton2, #bOpciones{	
+#boton1, #boton2, #boton3, #bOpciones{	
 	width:250px;
 	height: 80px;	
 	position:relative;
@@ -69,7 +69,7 @@ br{
 	top:23%;
 }
 
-#b1jugador, #b2jugadores{
+#b1jugador, #b2jugadores, #bregresar{
 	display:block;
     margin: auto;
     width: 250px;
@@ -77,12 +77,16 @@ br{
     position: relative;   
 }
 
-#bregresar{	
-	width:120px;
-	height: 100px;	
-	position:relative;
-	margin:auto;
-	left:26%
+#titulo, #numJ{
+	display:block;
+    margin: auto;
+    width: 900px;
+    height: 124px;
+    position: absolute;
+	top:15%;
+	left:24%;	
 }
+
+
 
 

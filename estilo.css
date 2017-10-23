@@ -12,6 +12,10 @@ br{
     bottom: 0;
     left: 0;
     right: 0;
+	border-radius: 25px;
+	border:25px solid #1C1C1C;
+	border-image: url(borde.png) 35 round;
+	
 }
 
 #bjugar, #bcreditos, #binstrucciones{
@@ -29,7 +33,19 @@ br{
 	position: fixed;
 	top: 30%;
 	left: 37%;
-	background: rgba(0, 0, 0, 0.1);
+	
+}
+
+#contenedorMain{
+	height: 420px;
+	width:330px;
+	position: fixed;
+	top: 36%;
+	left: 37.8%;
+	background: rgba(0, 0, 0, 0.5);	
+	border-radius: 25px;
+	border:20px solid #1C1C1C;
+	border-image: url(borde.png) 40 round;	
 }
 
 #boton1, #boton2, #boton3, #bOpciones{	
@@ -61,6 +77,18 @@ br{
 	top:95%;
 }
 
+#contenedorNumero{
+	height: 340px;
+	width:300px;
+	position: fixed;
+	top: 36%;
+	left: 38.5%;
+	background: rgba(0, 0, 0, 0.5);	
+	border-radius: 25px;
+	border:20px solid #1C1C1C;
+	border-image: url(borde.png) 40 round;	
+}
+
 #b1p, #b2p, #bvolver{	
 	width:250px;
 	height: 80px;	
@@ -77,16 +105,48 @@ br{
     position: relative;   
 }
 
-#titulo, #numJ{
+#titulo{
 	display:block;
     margin: auto;
     width: 900px;
     height: 124px;
     position: absolute;
 	top:15%;
-	left:24%;	
+	left:25%;	
 }
 
+#numJ{
+	display:block;
+    margin: auto;
+    width: 900px;
+    height: 124px;
+    position: absolute;
+	top:18%;
+	left:25%;	
+}
 
+#bpause{
+	width:80px;
+	height: 60px;	
+	position:absolute;
+	margin:auto;
+	left:65%;
+	top:13%;
+}
+
+#interfaz{
+	position:relative;
+	left:50%;
+	top:50%;
+}
+
+p{
+	font-family: Carousel;
+}
+
+@font-face {
+        font-family: "Carousel";
+        src: url("Carousel.ttf") format("truetype");
+    }
 
 
